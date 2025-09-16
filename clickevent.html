@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Click Event Handler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click Event Handling Example</h1>
+    <button id="btn1">Say Hello</button>
+    <button id="btn2">Show Time</button>
+    <button id="btn3">Clear Message</button>
+
+    <div id="output"></div>
+
+    <script>
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+        const btn3 = document.getElementById("btn3");
+        const output = document.getElementById("output");
+
+       
+        btn1.addEventListener("click", function() {
+            output.innerHTML = "Hello, welcome to JavaScript!";
+        });
+
+        btn2.addEventListener("click", function() {
+            const now = new Date();
+            output.innerHTML = "Current time: " + now.toLocaleTimeString();
+        });
+
+        btn3.addEventListener("click", function() {
+            output.innerHTML = "";
+        });
+    </script>
+
+</body>
+</html>
