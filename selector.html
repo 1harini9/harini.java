@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Element Selectors Example</title>
+<style>
+.highlight{
+color:green;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<h1 id="mainHeading">Hello from Heading</h1>
+<p class="highlight">This is a paragraph with a class.</p>
+<p>This is a paragraph with a tag selector.</p>
+<button onclick="selectElements()">select Elements</button>
+<script>
+function selectElements(){
+//Select by ID
+var heading=document.getElementById("mainHeading");
+heading.style.color="blue";
+//select by class
+var highlightPara=document.getElementsByClassName("highlight")[0];
+highlightpara.innerHTML="class selected and changed!";
+//Select by Tag
+var firstPara=document.getElementsByTagName("p")[1];
+firstPara.style.fontstyle="italic";
+//Select using querySelector
+varh1=document.querySelector("h1");
+h1.innerHTML+="[Modified]";
+}
+</script>
+</body>
+</html>
