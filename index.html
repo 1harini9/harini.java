@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Multiplication Table Generator</title>
+<style>
+body{
+font-family:Arial;
+text=align:center;
+margin-top:50px;
+}
+#output{
+margin-top:20px;
+font-size:18px;
+}
+</style>
+</head>
+<body>
+<h1>Multiplication Table Generator</h1>
+<button onclick="generateTable()">Generate Table</button>
+<div id="output"></div>
+<script srsc="server.js"></script>
+</body>
+</html>
+function generateTable() {
+     var num = prompt("Enter a number:");
+   var outputDiv = document.getElementById("output");
+    num = Number(num);
+    var result = "<h3>Table of " + num + "</h3>";
+    for (var i = 1; i <= 10; i++) {
+        result += num + " x " + i + " = " + (num * i) + "<br>";
+    }
+    outputDiv.innerHTML = result;
+}
